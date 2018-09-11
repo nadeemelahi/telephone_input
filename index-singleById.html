@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>WebScripts.biz</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/x-icon" href="../../img/faviconPuzzle.jpg">
+      <style>
+
+#pageWrapper {
+   max-width: 600px;
+   margin: auto;
+   font-family: serif;
+   padding-bottom: 10px;
+   color: #2B1A00;
+}
+
+h1,h2 {
+   font-family: sans-serif;
+      color: #683E00;
+}
+h1, .dlD { 
+   text-align: center;
+}
+.dlD {
+   margin: 50px auto;
+}
+.dlD p {
+   margin: 30px auto;
+      max-width: 330px;
+}
+.btn {
+   text-decoration: none;
+   border: 1px solid blue;
+   color: blue;
+   border-radius: 5px;
+   padding: 15px 10px;
+   font-size: 1.4em;
+}
+btn:hover {
+   background: #ddf;
+}
+.code {
+   font-family: monospace;
+}
+.red {
+   color: #9F0D00;
+}
+.green {
+   color: #019500;
+}
+.pink {
+   color: #FF00A2;
+}
+.blue {
+  color: #00939F;
+}
+.tabSm {
+   padding-left: 25px;
+}
+.tabLrg {
+   padding-left: 50px;
+}
+#copy {
+   font-size: 0.9em;
+   text-align: center;
+   margin: 150px auto 0px auto;
+   color: gray;
+   font-family: sans-serif;
+}
+      </style>
+   </head>
+   <body>
+      <div id="pageWrapper">
+	 <h1>JavaScript Plugin/Script<br>
+	    input XXX-XXX-XXXX format</h1>
+	 <div class="dlD">
+	    <h2>Download:</h2>
+	    <p><a class="btn" href="Tel_inp_formatter.js">Tel_inp_formatter.js</a></p>
+	    <p>The above script minified using <a href="https://closure-compiler.appspot.com">closure compiler</a> is the below script.</p>
+	    <p><a class="btn" href="Tel_inp_formatter.min.js">Tel_inp_formatter.min.js</a></p>
+	 </div>
+	 <p>Free tel input script licensed under gpl v2. Free for business or personal use. Not for re-sale. Please release modified or improved version under gpl v2 license too.</p>
+
+	 <h2>DEMO</h2>
+	 <p><input class="tel_input" type="tel" placeholder="XXX-XXX-XXXX"></p>
+	 <p><input class="tel_input" type="tel" placeholder="XXX-XXX-XXXX"></p>
+
+
+	 <h2>Description</h2>
+	 <p>This script will format an input of type="text" or type="tel" into XXX-XXX-XXXX.</p>
+	 <p>It listens on events click and keyup allowing only digits, arrow keys and delete and backspace.</p>
+	 <p>This script works on all modern browsers including IE9 and above.</p>
+
+	 <h2>Usage</h2>
+	 <p>Instantiate an instance of Tel_inp_formatter(my_input_id) passing in the id of your telephone input.</p>
+	 <p>For example, if you have an input with an id="my_tel_input" then you would code as follows:</p>
+	 <p class="code">
+	 <span class="green">var</span> 
+	 tel_inp_formatter <br>
+	 <span class="tabSm">=</span>
+	 <span class="red">new</span> 
+	 <span class="blue">Tel_inp_formatter</span>(<br>
+	 <span class="tabLrg pink">"my_tel_input"</span><br>
+	 <span class="tabSm">);</span>
+	 </p>
+	 <p>Once a valid telephone number if fully entered into the tel input the blur() method is called; taking away focus.</p>
+
+	 <p>Optionally, pass the id of the next input in a form, and that input will get focus after the tel input is filled with a valid telephone number.</p>
+	 <p>Such as follows:</p>      
+	 <p class="code">
+	 <span class="green">var</span> 
+	 tel_inp_formatter <br>
+	 <span class="tabSm">=</span> 
+	 <span class="red">new</span> 
+	 <span class="blue">Tel_inp_formatter</span>(<br>
+	 <span class="tabLrg pink">"my_tel_input"</span>,<br> 
+	 <span class="tabLrg pink">"my_next_input"</span><br>
+	 <span class="tabSm">);</span>
+	 </p>
+
+	 <h2>Advanced Notes</h2>
+	 <p>The Tel_inp_formatter class uses the .addEventListener() method which is not supported by IE8 and below.  There are two click handlers and a keyup handler. The names of functions passed to .addEventListener() methods are prepended with TIF_ for namespace safety. The minified version, minified using google's closure compiler, changes the click event handler function names for to 'n' and 'q'. So you must ensure any other code you use does not trample on those names. The keyup event handler get's inlined(an anonymous function) -so no namespace trampling concerns there.<p>
+
+	 <div class="dlD">
+	    <h2>Download: <br>
+	       (same as top of page)</h2>
+	    <p><a class="btn" href="Tel_inp_formatter.js">Tel_inp_formatter.js</a></p>
+	    <p>The above script minified using <a href="https://closure-compiler.appspot.com">closure compiler</a> is the below script.</p>
+	    <p><a class="btn" href="Tel_inp_formatter.min.js">Tel_inp_formatter.js</a></p>
+	 </div>
+
+	 <p id="copy">Copyright &copy; nadeem.elahi@gmail.com</p>
+      </div>
+
+      <script type="text/javascript" src="Tel_inp_formatter.js"></script>
+
+      <script type="text/javascript">
+
+setupTIFs("tel_input");
+
+      </script>
+
+   </body>
+</html>

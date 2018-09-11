@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>WebScripts.biz</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/x-icon" href="../../img/faviconPuzzle.jpg">
+      <style>
+
+body{ 
+   margin: 0; padding: 0;
+}
+#pageWrapper {
+   max-width: 600px;
+   margin: auto;
+   font-family: serif;
+   padding-bottom: 10px;
+   color: #2B1A00;
+   padding: 4px;
+}
+h1,h2,#copy {
+   font-family: sans-serif;
+}
+#firstH1,#copy {
+   color: gray;
+      background: black;
+	 margin: 0;
+	    padding: 1em;
+}
+#secondH1 { 
+   text-align: center; 
+   color: #683E00;
+}
+h2 { 
+   color: #683E00;
+   margin: 50px auto 30px auto; 
+}
+.dlD { text-align: center; margin: 50px auto; }
+.btn {
+   display: block;
+   width: 270px; 
+   height: 40px;
+   padding-top: 20px;
+   margin: 10px auto;
+   text-decoration: none;
+   border: 1px solid blue;
+   border-radius: 5px;
+   font-size: 1.2em;
+   color: blue;
+   font-family: sans-serif;
+}
+.btn:hover { background: #ddf; }
+.code {
+   font-size: 1.5em;
+   font-family: monospace;
+   margin-left: 20px;
+   padding-left: 10px;
+   border-left: 1px solid #2B1A00;
+}
+.pink { color: #FF00A2; }
+#copy {
+   font-size: 0.8em;
+   text-align: right;
+}
+      </style>
+   </head>
+   <body>
+      <h1 id="firstH1">JavaScript Plugin/Script</h1>
+      <div id="pageWrapper">
+	 <h1 id="secondH1">input XXX-XXX-XXXX format</h1>
+
+	 <div class="dlD">
+	    <h2>Download:</h2>
+	    <a class="btn" href="Tel_inp_formatter.js">Tel_inp_formatter.js</a>
+	    <a class="btn" href="Tel_inp_formatter.min.js">Tel_inp_formatter.min.js</a>
+	 </div>
+
+	 <h2>License</h2>
+	 <p>Free tel input script licensed under gpl v2. Free for business or personal use. Not for re-sale. Please release modified or improved version under gpl v2 license too.</p>
+
+	 <h2>DEMO</h2>
+	 <p><input class="tel_input" type="tel" placeholder="XXX-XXX-XXXX"></p>
+	 <p><input class="tel_input" type="tel" placeholder="XXX-XXX-XXXX"></p>
+
+
+	 <h2>Description</h2>
+	 <p>This script will format an input of type="text" or type="tel" into XXX-XXX-XXXX.</p>
+	 <p>It listens on events click and keyup allowing only digits, arrow keys and delete and backspace.</p>
+	 <p>This script works on all modern browsers including IE9 and above.</p>
+
+	 <h2>Usage</h2>
+	 <p>Add the script to your page. Set the classname for all inputs elements that you wish to have formatted by the script. Pass the classname you set, as string to the setup function named setupTIFs("classname_string").</p>
+	 <p>For example, if you set class="tel_input" then your JavaScript would simply be as follows:</p>
+	 <p class="code">
+	 setupTIFs(<span class="pink">"tel_input"</span>);
+	 </p>
+
+	 <h2>Advanced Notes</h2>
+	 <p>The Tel_inp_formatter class uses the .addEventListener() method which is not supported by IE8 and below.  There are two event handlers, one for clicks and the other for keyups. The minified script was minified using the <a href="https://closure-compiler.appspot.com">closure compiler</a> with the "Optimization:" level radio button selected.<p>
+
+	 <div class="dlD">
+	    <h2>Download: <br>
+	       (same as top of page)</h2>
+	    <p><a class="btn" href="Tel_inp_formatter.js">Tel_inp_formatter.js</a></p>
+	    <p><a class="btn" href="Tel_inp_formatter.min.js">Tel_inp_formatter.min.js</a></p>
+	 </div>
+
+      </div>
+
+      <p id="copy">Copyright 2018 &copy; nadeem.elahi@gmail.com</p>
+
+      <script type="text/javascript" src="Tel_inp_formatter.min.js"></script>
+
+      <script type="text/javascript">
+
+setupTIFs("tel_input");
+
+      </script>
+
+   </body>
+</html>
